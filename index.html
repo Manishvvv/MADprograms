@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Studio Practicals</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+
+        h1 {
+            color: #4285f4;
+        }
+
+        h2 {
+            color: #4285f4;
+        }
+
+        .code-container {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow-x: auto;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        #java-code {
+            background-color: #f8f8f8;
+        }
+
+        #xml-code {
+            background-color: #f0f0f0;
+        }
+
+        #output-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #output-image {
+            width: 40%;
+            max-width: 1920px;
+            /* Set the width for a 1080p display */
+            max-height: 1080px;
+            /* Set the height for a 1080p display */
+            margin: 0 auto;
+            /* Center the container */
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: none;
+        }
+
+        #output-image img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* .con {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .jump {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .jump li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .jump a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            background-color: #555;
+            transition: background-color 0.3s ease;
+        }
+
+        .jump a:hover {
+            background-color: #777;
+        }*/
+
+        .landing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #4285f4;
+        }
+
+        .landing-container img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* Styles for PC */
+        @media (min-width: 768px) {
+            .landing-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                align-items: center;
+                text-align: left;
+            }
+
+            h1 {
+                font-size: 2em;
+                text-align: left;
+            }
+        }
+
+        /* Styles for mobile */
+        @media (max-width: 767px) {
+            .landing-container img {
+                margin-top: 10px;
+            }
+        }
+
+        .con {
+            max-width: 800px;
+            /* Adjust the width as needed */
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the navigation list */
+        .jump {
+            list-style: none;
+            padding: 0;
+        }
+
+        .jump li {
+            margin-bottom: 10px;
+        }
+
+        /* Style for the links */
+        .jump a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .jump a:hover {
+            color: #e74c3c;
+        }
+
+        /* Media Query for mobile responsiveness */
+        @media (max-width: 600px) {
+            .con {
+                padding: 15px;
+            }
+
+            .jump li {
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="landing-container">
+        <h1>Android Studio Practicals</h1>
+        <img src="./images/ldimage11.webp" alt="Your Image">
+        <!-- Add any additional content or text here -->
+    </div>
+
+    <div class="con">
+        <ul class="jump">
+            <li><a href="#practical-1">practical-1</a></li>
+            <li><a href="#practical-2">practical-2</a></li>
+            <li><a href="#practical-3">practical-3</a></li>
+            <li><a href="#practical-4">practical-4</a></li>
+            <li><a href="#practical-5">practical-5</a></li>
+            <li><a href="#practical-6">practical-6</a></li>
+            <li><a href="#practical-7">practical-7</a></li>
+            <li><a href="#practical-8">practical-8</a></li>
+            <li><a href="#practical-9">practical-9</a></li>
+            <li><a href="#practical-10">practical-10</a></li>
+            <li><a href="#practical-11">practical-11</a></li>
+            <li><a href="#practical-12">practical-12</a></li>
+            <li><a href="#practical-13">practical-13</a></li>
+            <li><a href="#practical-14">practical-14</a></li>
+            <li><a href="#practical-15">practical-15</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-1">
+        <h2>Practical 1: HelloWorld Display</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.myapp1;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}  
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    &lt;TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+&lt;/androidx.constraintlayout.widget.ConstraintLayout>
+            </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="images/A1.webp"
+                    alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-2">
+        <h2>Practical 2: MyInfo App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <h4>Color's without Java code</h4>
+            <!-- Replace the following with your Java code -->
+            <pre><code>
+// Your Java code here  
+package com.example.myapp2;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+    }
+}
+            </code></pre>
+            <h4>Color's With Java code</h4>
+            <!-- Replace the following with your Java code -->
+            <pre><code>
+// Your Java code here  
+package com.example.myapp2;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        RelativeLayout myInfoLayout = findViewById(R.id.myInfoLayout);
+        TextView nameTextView = findViewById(R.id.nameTextView);
+        TextView qualificationTextView = findViewById(R.id.qualificationTextView);
+        TextView contactTextView = findViewById(R.id.contactTextView);
+        TextView emailTextView = findViewById(R.id.emailTextView);
+        TextView addressTextView = findViewById(R.id.addressTextView);
+
+        myInfoLayout.setBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+        nameTextView.setTextColor(getResources().getColor(android.R.color.holo_blue_dark));
+        qualificationTextView.setTextColor(getResources().getColor(android.R.color.holo_green_dark));
+        contactTextView.setTextColor(getResources().getColor(android.R.color.holo_orange_dark));
+        emailTextView.setTextColor(getResources().getColor(android.R.color.holo_red_dark));
+        addressTextView.setTextColor(getResources().getColor(android.R.color.holo_purple));
+
+    }
+}
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myInfoLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#808080"&gt;
+
+    &lt;TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: Varma Manish H"
+        android:textColor="#0000FF"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"/&gt;
+
+    &lt;TextView
+        android:id="@+id/qualificationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qualification: UG"
+        android:textColor="#00FF00"
+        android:textSize="18sp"
+        android:layout_below="@id/nameTextView"
+        android:layout_marginTop="20dp"/&gt;
+
+    &lt;TextView
+        android:id="@+id/contactTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Number: 9664938050"
+        android:textColor="#FFA500"
+        android:textSize="18sp"
+        android:layout_below="@id/qualificationTextView"
+        android:layout_marginTop="20dp"/&gt;
+
+    &lt;TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email ID: 210510104023@paruluniversity.ac.in"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        android:layout_below="@id/contactTextView"
+        android:layout_marginTop="20dp"/&gt;
+
+    &lt;TextView
+        android:id="@+id/addressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: 816, near gas godaun street, somatalav, dabhoi road, vadodara."
+        android:textColor="#800080"
+        android:textSize="18sp"
+        android:layout_below="@id/emailTextView"
+        android:layout_marginTop="20dp"/&gt;
+&lt;/RelativeLayout&gt;
+
+            </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="images/A2.webp"
+                    alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-3">
+        <h2>Practical 3: Android Activity Lifecycle</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.mp3;
+
+import android.os.Bundle;
+import android.util.Log;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "ActivityLifeCycle";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Log.d(TAG, "onCreate: Activity created");
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart: Activity started");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume: Activity resumed");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(TAG, "onPause: Activity paused");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "onStop: Activity stopped");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "onDestroy: Activity destroyed");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(TAG, "onRestart: Activity restarted");
+    }
+}
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+Don't needed
+</code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="images/A3.webp"
+                    alt="Don't needed">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-4">
+        <h2>Practical 4: Text Entry and Toast App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.mp4;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void onSubmitClick(View view) {
+        EditText editText = findViewById(R.id.editText);
+        String enteredText = editText.getText().toString();
+
+        Toast.makeText(this,enteredText, Toast.LENGTH_LONG).show();
+    }
+}
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"&gt;
+           
+    &lt;EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text"/&gt;
+           
+    &lt;Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_marginTop="16dp"
+        android:text="Submit"
+        android:onClick="onSubmitClick"/&gt;
+    &lt;/RelativeLayout&gt;
+            </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="images/A4.webp"
+                    alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-5">
+        <h2>Practical 5: Arithmetic Operations App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+                package com.example.mp5;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    private EditText input1, input2;
+    private TextView output;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        input1 = findViewById(R.id.input1);
+        input2 = findViewById(R.id.input2);
+        output = findViewById(R.id.output);
+
+        Button addButton = findViewById(R.id.addButton);
+        Button subtractButton = findViewById(R.id.subtractButton);
+        Button multiplyButton = findViewById(R.id.multiplyButton);
+        Button divideButton = findViewById(R.id.divideButton);
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("+");
+            }
+        });
+
+        subtractButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("-");
+            }
+        });
+
+        multiplyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("*");
+            }
+        });
+
+        divideButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("/");
+            }
+        });
+    }
+
+    private void performOperation(String operator) {
+        try {
+            double num1 = Double.parseDouble(input1.getText().toString());
+            double num2 = Double.parseDouble(input2.getText().toString());
+            double result = 0;
+
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+            }
+
+            output.setText("Result: " + result);
+        } catch (NumberFormatException | ArithmeticException e) {
+            output.setText("Error: Invalid input");
+        }
+    }
+}
+
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity"&gt;
+
+    &lt;EditText
+        android:id="@+id/input1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter first number"
+        android:inputType="numberDecimal" /&gt;
+
+    &lt;EditText
+        android:id="@+id/input2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter second number"
+        android:inputType="numberDecimal" /&gt;
+
+    &lt;Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add" /&gt;
+
+    &lt;Button
+        android:id="@+id/subtractButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtract" /&gt;
+
+    &lt;Button
+        android:id="@+id/multiplyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiply" /&gt;
+
+    &lt;Button
+        android:id="@+id/divideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Divide" /&gt;
+
+    &lt;TextView
+        android:id="@+id/output"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp" /&gt;
+
+&lt;/LinearLayout&gt;
+</code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="images/A5.webp"
+                    alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-6">
+        <h2>Practical 6: AutoCompleteText Demo</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.mp6;
+
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Sample data for AutoCompleteTextView
+        String[] countries = {
+                "United States", "China", "Japan", "Germany", "India", "United Kingdom",
+                "France", "Brazil", "Italy", "Canada", "South Korea", "Australia", "Russia",
+                "Spain", "Mexico", "Indonesia", "Turkey", "Netherlands", "Saudi Arabia",
+                "Switzerland", "Argentina", "Sweden", "Poland", "Belgium", "Iran", "Norway",
+                "Austria", "United Arab Emirates", "South Africa", "Israel", "Thailand",
+                "Nigeria", "Ireland", "Singapore", "Hong Kong", "Malaysia", "Denmark",
+                "Philippines", "Colombia", "Chile", "Finland", "Egypt", "Pakistan",
+                "Greece", "Portugal", "Czech Republic", "Romania", "Peru", "New Zealand"};
+
+        ;
+
+        // Create an ArrayAdapter with the sample data
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, countries);
+
+        // Get the AutoCompleteTextView reference from the layout
+        AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+
+        // Set the adapter for AutoCompleteTextView
+        autoCompleteTextView.setAdapter(adapter);
+    }
+}
+
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    &lt;AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter a country" />
+
+&lt;/RelativeLayout>
+            </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="images/A6.webp"
+                    alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Practical 1 -->
+    <div class="code-container" id="practical-7">
+        <h2>Practical 7: Login Module Application</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <h4>MainActivity.java</h4>
+            <!-- Replace the following with your Java code -->
+            <pre><code>
+// Your Java code here  
+package com.example.mp7;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    private EditText usernameEditText, passwordEditText;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        usernameEditText = findViewById(R.id.usernameEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+
+        Button loginButton = findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loginUser();
+            }
+        });
+    }
+
+    private void loginUser() {
+        String username = usernameEditText.getText().toString();
+        String password = passwordEditText.getText().toString();
+        
+        if (username.equals("sampleuser") && password.equals("password123")) {
+            Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(MainActivity.this, NextActivity.class);
+            intent.putExtra("USERNAME", username);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Login failed. Check username and password.", Toast.LENGTH_SHORT).show();
+        }
+    }
+}
+
+            </code></pre>
+
+            <h4>NextActivity.java</h4>
+            <!-- Replace the following with your Java code -->
+            <pre><code>
+// Your Java code here  
+package com.example.mp7;
+
+import android.os.Bundle;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class NextActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_next);
+
+        TextView usernameTextView = findViewById(R.id.usernameTextView);
+
+        // Get username from the intent
+        String username = getIntent().getStringExtra("USERNAME");
+
+        // Display username in TextView
+        usernameTextView.setText("Welcome, " + username + "!");
+    }
+}
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <h4>activity_main.xml</h4>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    &lt;EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"/>
+
+    &lt;EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+
+    &lt;Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:layout_marginTop="16dp"
+        android:text="Login"/>
+
+&lt;/RelativeLayout>
+</code></pre>
+
+            <h4>activity_next.xml</h4>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    &lt;TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, User!"
+        android:textSize="18sp"
+        android:layout_centerInParent="true"/>
+
+&lt;/RelativeLayout>
+</code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <h4>activity_main.xml</h4>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="images/A7.0.webp"
+                    alt="Output Image">
+            </div>
+            <h4>activity_next.xml</h4>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+                <img src="images/A7.1.webp"
+                    alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-8">
+        <h2>Practical 8: Email Validation Login</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.empty3;
+
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    private EditText emailEditText, passwordEditText;
+    private Button loginButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        emailEditText = findViewById(R.id.emailEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+        loginButton = findViewById(R.id.loginButton);
+
+        emailEditText.addTextChangedListener(textWatcher);
+        passwordEditText.addTextChangedListener(textWatcher);
+    }
+
+    private TextWatcher textWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        }
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            String email = emailEditText.getText().toString().trim();
+            String password = passwordEditText.getText().toString().trim();
+            boolean enableButton = !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password);
+            loginButton.setEnabled(enableButton);
+        }
+        @Override
+        public void afterTextChanged(Editable editable) {
+        }
+    };
+    public void loginUser(View view) {
+    }
+}
+  
+            </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    &lt;EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"/>
+
+    &lt;EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+
+    &lt;Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:layout_marginTop="16dp"
+        android:text="Login"
+        android:enabled="false"
+        android:onClick="loginUser"/>
+&lt;/RelativeLayout>
+            </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="images/A8.0.webp"
+                    alt="Output Image">
+            </div>
+            <h3>
+                <pre>  </pre>
+            </h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="images/A8.1.webp"
+                    alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="code-container" id="practical-9">
+        <h2>Practical 9: Passing Credentials App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <h4>MainActivity.java</h4>
+            <!-- Replace the following with your Java code -->
+            <pre><code>
+// Your Java code here
+package com.example.mp9;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    private EditText usernameEditText, passwordEditText;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        usernameEditText = findViewById(R.id.usernameEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+
+        Button loginButton = findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loginUser();
+            }
+        });
+    }
+
+    private void loginUser() {
+        String username = usernameEditText.getText().toString();
+        String password = passwordEditText.getText().toString();
+
+        if (!username.isEmpty() && !password.isEmpty()) {
+            Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(MainActivity.this, NextActivity.class);
+            intent.putExtra("USERNAME", username);
+            intent.putExtra("PASSWORD", password);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Please enter both username and password", Toast.LENGTH_SHORT).show();
+        }
+    }
+}
+
+            </code></pre>
+
+            <h4>NextActivity.java</h4>
+            <!-- Replace the following with your Java code -->
+            <pre><code>
+// Your Java code here  
+package com.example.mp9;
+
+import android.os.Bundle;
+import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class NextActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_next);
+
+        TextView usernameTextView = findViewById(R.id.usernameTextView);
+        TextView passwordTextView = findViewById(R.id.passwordTextView);
+
+        // Get username and password from the intent
+        String username = getIntent().getStringExtra("USERNAME");
+        String password = getIntent().getStringExtra("PASSWORD");
+
+        // Display username and password in TextViews
+        usernameTextView.setText("Username: " + username);
+        passwordTextView.setText("Password: " + password);
+    }
+}
+
+            </code></pre>
+
+
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <h4>activity_main.xml</h4>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+    &lt;!-- Your XML code here --&gt;
+    &lt;?xml version="1.0" encoding="utf-8"?>
+    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    
+    &lt;EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"/>
+    
+    &lt;EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Password"
+        android:inputType="textPassword"/>
+    
+    &lt;Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEditText"
+        android:layout_marginTop="16dp"
+        android:text="Login"/>
+    
+&lt;/RelativeLayout>
+            </code></pre>
+            <h4>activity_next.xml</h4>
+            <!-- Replace the following with your XML code -->
+            <pre><code>
+&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    &lt;TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username: "
+        android:textSize="18sp"
+        android:layout_centerInParent="true"/>
+    
+    &lt;TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameTextView"
+        android:layout_marginTop="16dp"
+        android:text="Password: "
+        android:textSize="18sp"
+        android:layout_centerInParent="true"/>
+&lt;/RelativeLayout>
+    </code></pre>
+
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <h4>activity_main.xml</h4>
+            <div id="output-image">
+
+                <!-- Replace the following with your output image -->
+
+                <img src="images/A9.0.webp"
+                    alt="Output Image">
+            </div>
+            <h4>activity_next.xml</h4>
+            <div id="output-image">
+
+                <!-- Replace the following with your output image -->
+
+                <img src="images/A9.1.webp"
+                    alt="Output Image">
+            </div>
+        </div>
+    </div>
+    <div class="code-container" id="practical-10">
+        <h2>Practical 10: ListView Demo</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+//Don't needed
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" /&gt;
+
+&lt;/RelativeLayout&gt;
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="images/A10.webp" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-11">
+        <h2>Practical 11: RadioButton Toast App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.mp11;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+   
+        RadioGroup radioGroup = findViewById(R.id.radioGroup);
+
+   
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                
+                RadioButton radioButton = findViewById(checkedId);
+
+             
+                if (radioButton != null) {
+                    String selectedText = radioButton.getText().toString();
+                    Toast.makeText(MainActivity.this, "Selected: " + selectedText, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+}
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"&gt;
+
+        &lt;RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"&gt;
+
+            &lt;RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 1" /&gt;
+
+            &lt;RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 2" /&gt;
+
+            &lt;RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Option 3" /&gt;
+        &lt;/RadioGroup&gt;
+
+    &lt;/RelativeLayout&gt;
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="images/A11.webp" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-12">
+        <h2>Practical 12: CheckBox Toast App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.mp12;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        CheckBox checkBox1 = findViewById(R.id.checkBox1);
+        CheckBox checkBox2 = findViewById(R.id.checkBox2);
+        CheckBox checkBox3 = findViewById(R.id.checkBox3);
+        
+        Button showButton = findViewById(R.id.showButton);
+        
+        showButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StringBuilder checkedCheckboxes = new StringBuilder();
+                
+                if (checkBox1.isChecked()) {
+                    checkedCheckboxes.append("Checkbox 1\n");
+                }
+                if (checkBox2.isChecked()) {
+                    checkedCheckboxes.append("Checkbox 2\n");
+                }
+                if (checkBox3.isChecked()) {
+                    checkedCheckboxes.append("Checkbox 3\n");
+                }
+                
+                if (checkedCheckboxes.length() > 0) {
+                    Toast.makeText(MainActivity.this, "Checked Checkboxes:\n" + checkedCheckboxes.toString(), Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "No checkboxes checked", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+}
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkbox 1"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/&gt;
+
+    &lt;CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkbox 2"
+        android:layout_below="@id/checkBox1"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/&gt;
+
+    &lt;CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkbox 3"
+        android:layout_below="@id/checkBox2"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/&gt;
+
+    &lt;Button
+        android:id="@+id/showButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Checked Checkboxes"
+        android:layout_below="@id/checkBox3"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/&gt;
+
+&lt;/RelativeLayout&gt;
+
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="images/A12.webp" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-13">
+        <h2>Practical 13: CheckBox Toast App (Dynamic)</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.mp13;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        CheckBox checkBox1 = findViewById(R.id.checkBox1);
+        CheckBox checkBox2 = findViewById(R.id.checkBox2);
+        CheckBox checkBox3 = findViewById(R.id.checkBox3);
+
+        checkBox1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCheckedCheckboxes();
+            }
+        });
+
+        checkBox2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCheckedCheckboxes();
+            }
+        });
+
+        checkBox3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showCheckedCheckboxes();
+            }
+        });
+    }
+
+    private void showCheckedCheckboxes() {
+        StringBuilder checkedCheckboxes = new StringBuilder();
+
+        CheckBox checkBox1 = findViewById(R.id.checkBox1);
+        CheckBox checkBox2 = findViewById(R.id.checkBox2);
+        CheckBox checkBox3 = findViewById(R.id.checkBox3);
+
+        if (checkBox1.isChecked()) {
+            checkedCheckboxes.append("Checkbox 1\n");
+        }
+        if (checkBox2.isChecked()) {
+            checkedCheckboxes.append("Checkbox 2\n");
+        }
+        if (checkBox3.isChecked()) {
+            checkedCheckboxes.append("Checkbox 3\n");
+        }
+
+        if (checkedCheckboxes.length() > 0) {
+            Toast.makeText(MainActivity.this, "Checked Checkboxes:\n" + checkedCheckboxes.toString(), Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(MainActivity.this, "No checkboxes checked", Toast.LENGTH_SHORT).show();
+        }
+    }
+}
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"&gt;
+
+        &lt;CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkbox 1"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/&gt;
+
+        &lt;CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkbox 2"
+            android:layout_below="@id/checkBox1"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/&gt;
+
+        &lt;CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkbox 3"
+            android:layout_below="@id/checkBox2"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/&gt;
+
+    &lt;/RelativeLayout&gt;
+
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="images/A13.webp" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-14">
+        <h2>Practical 14: WebView Demo</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.p14webview;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.res.Configuration;
+import android.os.Bundle;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private WebView webView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        webView = findViewById(R.id.webview);
+        webView.loadUrl("https://www.google.com");
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        webView.getSettings().setJavaScriptEnabled(true);
+    }
+}
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+ &lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"&gt;
+
+        &lt;WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" /&gt;
+
+    &lt;/RelativeLayout&gt;
+
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="images/A14.webp" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="code-container" id="practical-15">
+        <h2>Practical 15: SeekBar App</h2>
+        <div class="code-container" id="java-code">
+            <h3>Java Code</h3>
+            <!-- Replace the following with your Java code -->
+            <pre><code>// Your Java code here
+package com.example.p15seekbar;
+
+import android.os.Bundle;
+import android.widget.SeekBar;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        SeekBar seekBar = findViewById(R.id.seekBar);
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                Toast.makeText(MainActivity.this, "Progress: " + progress, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+    }
+}
+        </code></pre>
+        </div>
+        <div class="code-container" id="xml-code">
+            <h3>XML Code</h3>
+            <!-- Replace the following with your XML code -->
+            <pre><code>&lt;!-- Your XML code here --&gt;
+ &lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"&gt;
+
+    &lt;SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" /&gt;
+
+&lt;/RelativeLayout&gt;
+
+
+
+        </code></pre>
+        </div>
+        <div id="output-container">
+            <h3>Output</h3>
+            <div id="output-image">
+                <!-- Replace the following with your output image -->
+
+                <img src="images/A15.webp" alt="Output Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Repeat the above structure for the remaining practicals (2 to 7) -->
+    <div class="footer">
+        <p>This page is for educational purposes only.</p>
+    </div>
+    <script>
+        // You can add any JavaScript code here if needed
+    </script>
+</body>
+
+</html>
